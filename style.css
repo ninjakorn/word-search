@@ -1,0 +1,63 @@
+/* Overall game container styling */
+#game-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px;
+  }
+  
+  /* Word search grid styling using CSS Grid */
+  #word-search-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 40px); /* 10 columns, each 40px wide */
+    grid-gap: 2px;
+  }
+  
+  /* Styling for each grid cell */
+  .grid-cell {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.5s ease-out; /* For smooth trail fade-out */
+  }
+  
+  /* Temporary mouse trail effect */
+  .grid-cell.trail {
+    background-color: #4feed3;
+  }
+  
+  /* Permanent highlight for found words */
+  .grid-cell.found-cell {
+    background-color: #add8e6;
+  }
+  
+  /* Word list styling */
+  #word-list {
+    margin-left: 20px;
+  }
+  
+  /* Mark found words with a line-through effect */
+  #word-list li.found {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  /* Level controls styling */
+  #level-controls {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #next-level-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
